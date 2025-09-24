@@ -1,4 +1,4 @@
-# Hey there! 👋 Welcome to Mock Interview Prep
+# Welcome to Mock Interview Prep
 
 If you are getting ready for a Software Engineer II interview this is for you. 
 
