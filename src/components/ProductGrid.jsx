@@ -6,6 +6,7 @@ const ProductGrid = ({ products, onViewDetails, isLoading = false }) => {
     return (
       <div className="product-grid">
         {/* TODO: Implement loading skeleton */}
+        
         {Array(8).fill().map((_, index) => (
           <div key={index} className="product-card skeleton">
             <div className="skeleton-image"></div>
