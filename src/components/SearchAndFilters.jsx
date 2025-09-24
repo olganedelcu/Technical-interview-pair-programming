@@ -21,35 +21,50 @@ const SearchAndFilters = ({
   const categories = getCategories();
   const brands = getBrands();
 
+  // TODO: Implement search input handler
   const handleSearchChange = (e) => {
+    // TODO: Call onSearch with input value
     onSearch(e.target.value);
   };
 
+  // TODO: Implement category filter handler
   const handleCategoryChange = (e) => {
+    // TODO: Call onCategoryFilter with selected value
     onCategoryFilter(e.target.value);
   };
 
+  // TODO: Implement brand filter handler
   const handleBrandChange = (e) => {
+    // TODO: Call onBrandFilter with selected value
     onBrandFilter(e.target.value);
   };
 
+  // TODO: Implement price range handler
   const handlePriceChange = (e) => {
+    // TODO: Update price range based on min/max inputs
+    // TODO: Call onPriceRangeFilter with new range
     const { name, value } = e.target;
     const newRange = { ...priceRange, [name]: parseInt(value) };
     onPriceRangeFilter(newRange.min, newRange.max);
   };
 
+  // TODO: Implement sort handler
   const handleSortChange = (e) => {
+    // TODO: Parse sort field and order from select value
+    // TODO: Call onSort with field and order
     const [field, order] = e.target.value.split('-');
     onSort(field, order);
   };
 
+  // TODO: Implement stock visibility handler
   const handleStockChange = (e) => {
+    // TODO: Call onStockFilter with checkbox state
     onStockFilter(e.target.checked);
   };
 
   return (
     <div className="search-and-filters">
+      {/* TODO: Search Section */}
       <div className="search-section">
         <div className="search-box">
           <input
@@ -63,8 +78,10 @@ const SearchAndFilters = ({
         </div>
       </div>
 
+      {/* TODO: Filters Section */}
       <div className="filters-section">
         <div className="filter-row">
+          {/* TODO: Category Filter */}
           <div className="filter-group">
             <label htmlFor="category">Category</label>
             <select
@@ -81,6 +98,7 @@ const SearchAndFilters = ({
             </select>
           </div>
 
+          {/* TODO: Brand Filter */}
           <div className="filter-group">
             <label htmlFor="brand">Brand</label>
             <select
@@ -97,6 +115,7 @@ const SearchAndFilters = ({
             </select>
           </div>
 
+          {/* TODO: Sort Options */}
           <div className="filter-group">
             <label htmlFor="sort">Sort By</label>
             <select
@@ -115,6 +134,7 @@ const SearchAndFilters = ({
         </div>
 
         <div className="filter-row">
+          {/* TODO: Price Range Filter */}
           <div className="price-range-group">
             <label>Price Range</label>
             <div className="price-inputs">
@@ -140,6 +160,7 @@ const SearchAndFilters = ({
             </div>
           </div>
 
+          {/* TODO: Stock Visibility Filter */}
           <div className="checkbox-group">
             <label className="checkbox-label">
               <input
@@ -151,6 +172,7 @@ const SearchAndFilters = ({
             </label>
           </div>
 
+          {/* TODO: Clear Filters Button */}
           <div className="filter-actions">
             <button
               className="clear-filters-btn"
@@ -163,7 +185,7 @@ const SearchAndFilters = ({
         </div>
       </div>
 
-      {/* TODO: Display filter summary */}
+      {/* TODO: Display filter summary and results count */}
       {filterSummary.hasActiveFilters && (
         <div className="filter-summary">
           <div className="active-filters">

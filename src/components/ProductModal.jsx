@@ -6,6 +6,7 @@ const ProductModal = ({ product, isOpen, onClose }) => {
 
   if (!isOpen || !product) return null;
 
+  // TODO: Implement price formatting utility
   const formatPrice = (price) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -13,7 +14,10 @@ const ProductModal = ({ product, isOpen, onClose }) => {
     }).format(price);
   };
 
+  // TODO: Implement star rating display
   const renderStars = (rating) => {
+    // TODO: Create stars based on rating value
+    // TODO: Handle full stars, half stars, empty stars
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -34,18 +38,26 @@ const ProductModal = ({ product, isOpen, onClose }) => {
     return stars;
   };
 
+  // TODO: Implement quantity change handler
   const handleQuantityChange = (e) => {
+    // TODO: Validate quantity (minimum 1)
+    // TODO: Update quantity state
     const value = Math.max(1, parseInt(e.target.value) || 1);
     setQuantity(value);
   };
 
+  // TODO: Implement add to cart functionality
   const handleAddToCart = () => {
-    // TODO: Implement add to cart functionality
+    // TODO: Add product with quantity to cart
+    // TODO: Show success message
+    // TODO: Close modal
     console.log(`Added ${quantity} of ${product.name} to cart`);
     onClose();
   };
 
+  // TODO: Implement modal overlay click handler
   const handleOverlayClick = (e) => {
+    // TODO: Close modal only if overlay (not content) is clicked
     if (e.target === e.currentTarget) {
       onClose();
     }

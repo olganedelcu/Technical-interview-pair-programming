@@ -18,6 +18,9 @@ const Pagination = ({
 
   // TODO: Implement page number generation
   const generatePageNumbers = () => {
+    // TODO: Create array of page numbers to display
+    // TODO: Handle ellipsis for large page counts
+    // TODO: Show max 5 visible pages around current page
     const pages = [];
     const maxVisiblePages = 5;
     let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
@@ -37,18 +40,21 @@ const Pagination = ({
 
   const pageNumbers = generatePageNumbers();
 
+  // TODO: Handle edge case - no pagination needed
   if (totalPages <= 1) {
     return null;
   }
 
   return (
     <div className="pagination">
+      {/* TODO: Display pagination info */}
       <div className="pagination-info">
         Showing {startItem}-{endItem} of {totalItems} products
       </div>
 
+      {/* TODO: Pagination controls */}
       <div className="pagination-controls">
-        {/* Previous button */}
+        {/* TODO: Previous button */}
         <button
           className="pagination-btn prev"
           onClick={onPreviousPage}
@@ -57,7 +63,7 @@ const Pagination = ({
           ← Previous
         </button>
 
-        {/* First page and ellipsis */}
+        {/* TODO: First page and ellipsis */}
         {pageNumbers[0] > 1 && (
           <>
             <button
@@ -72,7 +78,7 @@ const Pagination = ({
           </>
         )}
 
-        {/* Page numbers */}
+        {/* TODO: Page number buttons */}
         {pageNumbers.map(pageNum => (
           <button
             key={pageNum}
@@ -83,7 +89,7 @@ const Pagination = ({
           </button>
         ))}
 
-        {/* Last page and ellipsis */}
+        {/* TODO: Last page and ellipsis */}
         {pageNumbers[pageNumbers.length - 1] < totalPages && (
           <>
             {pageNumbers[pageNumbers.length - 1] < totalPages - 1 && (
@@ -98,7 +104,7 @@ const Pagination = ({
           </>
         )}
 
-        {/* Next button */}
+        {/* TODO: Next button */}
         <button
           className="pagination-btn next"
           onClick={onNextPage}

@@ -162,3 +162,59 @@ They might ask about this:
 - Have questions ready about the role and company
 
 ---
+
+## Interview Instructions
+
+### Getting Started
+1. Clone and run the project:
+   ```bash
+   git clone [repository-url]
+   cd Lightspeed
+   npm install
+   npm start
+   ```
+
+2. The app will display 8 products but **none of the filters work yet!**
+
+### What's Working
+- ✅ Basic React app structure
+- ✅ Product grid displays 8 sample products
+- ✅ All components render without errors
+- ✅ Clean, professional UI design
+- ✅ Form inputs and buttons are connected
+
+### What Needs Implementation (TODOs)
+The core business logic is missing! This is what we'll build together:
+
+#### Priority 1: Basic Filtering
+- **Search functionality** - Filter products by name, description, tags
+- **Category filter** - Filter by Electronics, Clothing, etc.
+- **Price range filter** - Min/max price filtering
+
+#### Priority 2: Sorting & Pagination
+- **Sorting** - Name, price, rating, reviews (ascending/descending)
+- **Pagination** - Calculate pages, navigation controls
+- **Results count** - Show filtered results count
+
+#### Priority 3: Enhanced Features
+- **Stock filtering** - Show/hide out of stock items
+- **Filter summary** - Display active filters
+- **Performance** - useMemo/useCallback optimization
+
+### Interview Focus Areas
+- **React Hooks** - Custom hooks, state management, memoization
+- **Algorithm Design** - Filtering, sorting, pagination logic
+- **Performance** - When and how to optimize re-renders
+- **Component Architecture** - Props, composition, separation of concerns
+- **User Experience** - Loading states, error handling, responsive design
+
+### Approach
+1. **Start Simple** - Get basic search working first
+2. **Build Incrementally** - Add one filter at a time  
+3. **Think Out Loud** - Explain your reasoning and trade-offs
+4. **Ask Questions** - Clarify requirements and edge cases
+5. **Test As You Go** - Verify functionality works as expected
+
+The codebase is designed to let you focus on the algorithms and React patterns without getting bogged down in setup or styling.
+
+---
